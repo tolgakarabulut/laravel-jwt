@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "566af999-2c5d-4536-916c-f358babe86db",
+		"name": "Laravel-jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/member/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"member",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tZW1iZXJcL3JlZnJlc2giLCJpYXQiOjE1NzgwOTY5NjUsImV4cCI6MTU3ODEwMDU4MiwibmJmIjoxNTc4MDk2OTgyLCJqdGkiOiJXbjh5UTQ1dVlKOEpHbXlZIiwic3ViIjoyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0._wRF-5uK8gd4aWIb4WqAtsJO2tvxcfhlcLPQ42R4Wj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/member/detail",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"member",
+						"detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tZW1iZXJcL2xvZ2luIiwiaWF0IjoxNTc4MDk2OTY1LCJleHAiOjE1NzgxMDA1NjUsIm5iZiI6MTU3ODA5Njk2NSwianRpIjoibWcxbDQyVTNBZXRlMG5xRCIsInN1YiI6MiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.LgsSIEwCVGB5Rtz8Swe6lM6F1r2GOUtVcxP7vnKmvgU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/member/refresh",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"member",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Admin User",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/member/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"member",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9tZW1iZXJcL2xvZ2luIiwiaWF0IjoxNTc4MDk3NDA5LCJleHAiOjE1NzgxMDEwMDksIm5iZiI6MTU3ODA5NzQwOSwianRpIjoieHJxWjNlVWdQMXRKV0NNcSIsInN1YiI6MiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.fbRiWAUneRfqAl9na5hVRoRpaJcgKX_9ld25gNBKU8I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/member/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"member",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
